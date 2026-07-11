@@ -12,7 +12,7 @@ const aiResearch = [
     title: "Low-Resource NLP for African Languages",
     authors: "Okafor, C., Abubakar, M., Eze, T.",
     venue: "International Conference on Learning Representations (ICLR), 2025",
-    abstract: "We present a novel transfer-learning framework for natural language processing in low-resource African languages, achieving state-of-the-art results on Hausa, Igbo, and Yoruba text classification tasks. Our approach reduces the data requirement by 73% compared to traditional fine-tuning methods while maintaining 94% accuracy.",
+    abstract: "We present a novel transfer-learning framework for natural language processing in low-resource African languages, achieving state-of-the-art results on Hausa, Igbo, and Yoruba text classification tasks. Our approach reduces the data requirement significantly compared to traditional fine-tuning methods while maintaining high accuracy.",
     tags: ["Natural Language Processing", "African Languages", "Transfer Learning"],
   },
   {
@@ -20,7 +20,7 @@ const aiResearch = [
     title: "Federated Learning for Financial Inclusion",
     authors: "Okafor, C., Adewale, K., Mohammed, S.",
     venue: "Neural Information Processing Systems (NeurIPS), 2025",
-    abstract: "This paper introduces a privacy-preserving federated learning architecture designed for financial institutions in emerging markets. Our framework enables collaborative model training across multiple banks without sharing sensitive customer data, achieving 98% of centralized model performance while guaranteeing differential privacy guarantees.",
+    abstract: "This paper introduces a privacy-preserving federated learning architecture designed for financial institutions in emerging markets. Our framework enables collaborative model training across multiple banks without sharing sensitive customer data, achieving near-centralized model performance while guaranteeing differential privacy guarantees.",
     tags: ["Federated Learning", "Financial Inclusion", "Privacy"],
   },
   {
@@ -28,7 +28,7 @@ const aiResearch = [
     title: "Vision Transformers for Agricultural Yield Prediction",
     authors: "Nwachukwu, I., Okafor, C., Bello, A.",
     venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026",
-    abstract: "We propose a novel vision transformer architecture optimized for satellite and drone imagery analysis in Sub-Saharan African agricultural contexts. Our model achieves 91% accuracy in predicting crop yields across diverse agro-ecological zones, enabling early intervention and food security planning.",
+    abstract: "We propose a novel vision transformer architecture optimized for satellite and drone imagery analysis in Sub-Saharan African agricultural contexts. Our model achieves strong accuracy in predicting crop yields across diverse agro-ecological zones, enabling early intervention and food security planning.",
     tags: ["Computer Vision", "Agriculture", "Transformers"],
   },
 ]
@@ -38,19 +38,19 @@ const enterpriseTech = [
     icon: Microscope,
     title: "Zero-Trust Architecture for African Government Systems",
     desc: "Developing a zero-trust security framework adapted for the unique infrastructure constraints and regulatory requirements of African government digital systems, including air-gapped deployments and legacy system integration.",
-    findings: "93% reduction in attack surface with 40% lower operational overhead compared to traditional perimeter-based security models.",
+    findings: "Significant reduction in attack surface with lower operational overhead compared to traditional perimeter-based security models.",
   },
   {
     icon: Microscope,
     title: "Edge AI for Offline Enterprise Operations",
     desc: "Researching distributed AI inference at the edge for enterprises operating in connectivity-constrained environments. Our optimized model quantization techniques enable complex LLM inference on commodity hardware with intermittent network access.",
-    findings: "Real-time AI capabilities maintained during 87% of connectivity outages with no data loss.",
+    findings: "Real-time AI capabilities maintained during most connectivity outages with no data loss.",
   },
   {
     icon: Microscope,
     title: "Digital Identity Infrastructure for Underserved Populations",
     desc: "Building self-sovereign identity systems that leverage biometrics, blockchain, and decentralized identifiers to provide verifiable digital identities for the 500 million Africans without formal identification.",
-    findings: "Successful pilot across three states enrolled 1.2 million users with 99.8% biometric match accuracy.",
+    findings: "Successful pilot across three states enrolled millions of users with high biometric match accuracy.",
   },
 ]
 
@@ -59,19 +59,19 @@ const fintechInsights = [
     icon: Lightbulb,
     title: "Agentic AI for Micro-Lending",
     desc: "Autonomous AI agents that assess creditworthiness, disburse loans, and manage collections for micro-enterprises using alternative data sources including mobile money transactions, utility payments, and social credit scoring.",
-    impact: "30% reduction in default rates and 3x increase in loan disbursement speed.",
+    impact: "Reduction in default rates and increase in loan disbursement speed.",
   },
   {
     icon: Lightbulb,
     title: "Real-Time Fraud Detection at Scale",
     desc: "Graph neural network models that detect sophisticated fraud patterns across real-time payment rails, processing over 10,000 transactions per second with sub-100ms latency for instant decisioning.",
-    impact: "False positive reduction of 65% while catching 99.2% of fraudulent transactions.",
+    impact: "Significant false positive reduction while catching most fraudulent transactions.",
   },
   {
     icon: Lightbulb,
     title: "Interoperable Payment Rail Architecture",
     desc: "Designing a unified payment infrastructure that seamlessly connects mobile money, bank transfers, USSD, and card networks into a single API layer with intelligent routing and settlement optimization.",
-    impact: "Transaction success rates improved from 82% to 99.5% across participating institutions.",
+    impact: "Transaction success rates improved dramatically across participating institutions.",
   },
 ]
 
@@ -81,21 +81,18 @@ const whitePapers = [
     title: "The State of AI Infrastructure in Africa: 2026",
     excerpt: "A comprehensive analysis of AI readiness across 54 African nations, covering GPU availability, data center capacity, talent pools, regulatory landscapes, and investment trends shaping the continent's AI future.",
     pages: 48,
-    downloads: "12,400+",
   },
   {
     icon: FileText,
     title: "Fintech Security Architecture for the Next Decade",
     excerpt: "A technical blueprint for building quantum-resistant, zero-trust fintech infrastructure that can withstand evolving cyber threats while maintaining regulatory compliance across multiple African jurisdictions.",
     pages: 62,
-    downloads: "8,700+",
   },
   {
     icon: FileText,
     title: "Enterprise AI Governance Framework",
     excerpt: "A practical framework for implementing responsible AI governance in African enterprises, covering model risk management, bias detection, explainability requirements, and compliance with emerging AI regulations.",
     pages: 36,
-    downloads: "6,200+",
   },
 ]
 
@@ -316,7 +313,6 @@ export default function Research() {
                 <div className="flex items-center justify-between pt-4 border-t border-border">
                   <div className="flex gap-4 text-xs text-muted-text">
                     <span>{wp.pages} pages</span>
-                    <span>{wp.downloads} downloads</span>
                   </div>
                   <Button size="sm" variant="outline" className="rounded-full gap-1.5 text-xs">
                     Download <ExternalLink size={14} />

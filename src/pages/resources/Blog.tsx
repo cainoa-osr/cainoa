@@ -34,7 +34,7 @@ const articles = [
     category: "Artificial Intelligence",
     title: "Building Scalable LLM Infrastructure for African Enterprises",
     excerpt:
-      "Engineering lessons from deploying production-grade LLM systems capable of handling 10,000+ concurrent requests while maintaining 99.9% uptime across diverse network conditions.",
+      "Engineering lessons from deploying production-grade LLM systems capable of handling high volumes of concurrent requests while maintaining reliable uptime across diverse network conditions.",
     author: "Chidi Eze",
     date: "June 22, 2026",
     readTime: "8 min read",
@@ -43,7 +43,7 @@ const articles = [
     category: "Cybersecurity",
     title: "Implementing Zero Trust Architecture in African Banking",
     excerpt:
-      "How we designed and deployed a zero-trust security framework for a tier-1 Nigerian bank, reducing breach surface area by 78% while maintaining regulatory compliance with CBN guidelines.",
+      "How we designed and deployed a zero-trust security framework for a tier-1 Nigerian bank, reducing breach surface area while maintaining regulatory compliance with CBN guidelines.",
     author: "Folake Adeyemi",
     date: "June 15, 2026",
     readTime: "10 min read",
@@ -52,7 +52,7 @@ const articles = [
     category: "Fintech",
     title: "The Future of Cooperative Banking in a Digital Economy",
     excerpt:
-      "Exploring how digital transformation and AI-powered member management are reshaping Nigeria's 900+ cooperative societies and unlocking financial inclusion for millions of underserved members.",
+      "Exploring how digital transformation and AI-powered member management are reshaping Nigeria's cooperative societies and unlocking financial inclusion for millions of underserved members.",
     author: "Ibrahim Suleiman",
     date: "June 8, 2026",
     readTime: "7 min read",
@@ -61,7 +61,7 @@ const articles = [
     category: "Artificial Intelligence",
     title: "AI-Powered Fraud Detection at Transaction Scale",
     excerpt:
-      "Inside the machine learning pipeline that processes over 500,000 transactions daily, identifying fraudulent patterns in real time with 99.2% precision across multiple payment channels.",
+      "Inside the machine learning pipeline that processes high volumes of transactions daily, identifying fraudulent patterns in real time with high precision across multiple payment channels.",
     author: "Zainab Bello",
     date: "May 25, 2026",
     readTime: "9 min read",

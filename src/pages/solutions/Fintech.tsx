@@ -65,13 +65,6 @@ const solutions = [
   },
 ]
 
-const stats = [
-  { value: "99.97%", label: "Platform Uptime" },
-  { value: "500K+", label: "Transactions Daily" },
-  { value: "50+", label: "Financial Institutions" },
-  { value: "₦2B+", label: "Processed Monthly" },
-]
-
 export default function Fintech() {
   const navigate = useNavigate()
 
@@ -82,26 +75,6 @@ export default function Fintech() {
         title="Modern Financial Infrastructure"
         subtitle="Secure, scalable payment systems and digital banking platforms built for African financial institutions and cooperatives."
       />
-
-      <section className="py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((s, i) => (
-              <motion.div
-                key={s.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center"
-              >
-                <div className="font-heading text-4xl lg:text-5xl font-bold text-accent mb-2">{s.value}</div>
-                <div className="text-sm text-muted-text font-medium">{s.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="py-20 lg:py-28 bg-secondary-bg/50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

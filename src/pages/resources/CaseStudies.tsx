@@ -5,14 +5,9 @@ import CTASection from "../../components/shared/CTASection"
 import { Button } from "../../components/ui/button"
 import {
   Building2, Landmark, GraduationCap, Heart, TrendingUp,
-  CheckCircle, Quote, ArrowRight, BarChart3, Users,
+  Quote, ArrowRight, Users,
 } from "lucide-react"
 import { useNavigate } from "react-router-dom"
-
-interface Metric {
-  label: string
-  value: string
-}
 
 interface Testimonial {
   text: string
@@ -29,7 +24,6 @@ interface CaseStudy {
   challenge: string
   solution: string
   tech: string[]
-  results: Metric[]
   testimonial: Testimonial
   featured?: boolean
 }
@@ -53,12 +47,6 @@ const caseStudies: CaseStudy[] = [
       "React / Node.js",
       "Kubernetes / Docker",
     ],
-    results: [
-      { label: "Service Delivery Time", value: "89% Faster" },
-      { label: "Annual Cost Savings", value: "₦2.4B" },
-      { label: "Citizens Served", value: "4.2M+" },
-      { label: "Data Sovereignty", value: "100%" },
-    ],
     testimonial: {
       text: "Cainoa didn't just build us software — they built us a digital backbone. Our citizens now access services in minutes that used to take weeks. This is what true technology partnership looks like.",
       author: "Dr. Abdulkadir Abubakar",
@@ -73,7 +61,7 @@ const caseStudies: CaseStudy[] = [
     industry: "Financial Institutions",
     region: "North-Central Nigeria",
     challenge:
-      "First Trust Microfinance Bank operated on legacy core banking infrastructure that couldn't support mobile banking, real-time transfers, or agency banking. With 80% of their customer base in rural areas, the bank needed a digital leap to remain competitive and meet CBN financial inclusion targets.",
+      "First Trust Microfinance Bank operated on legacy core banking infrastructure that couldn't support mobile banking, real-time transfers, or agency banking. With most of their customer base in rural areas, the bank needed a digital leap to remain competitive and meet CBN financial inclusion targets.",
     solution:
       "We implemented a cloud-native core banking platform with USSD mobile banking, agent banking module, real-time NIBSS integration, automated loan origination, and AI-powered credit scoring. The solution included offline-capable POS terminals for rural agents.",
     tech: [
@@ -83,12 +71,6 @@ const caseStudies: CaseStudy[] = [
       "AI Credit Scoring Engine",
       "PostgreSQL / Redis",
       "AWS Infrastructure",
-    ],
-    results: [
-      { label: "Transaction Volume", value: "340% Growth" },
-      { label: "Agent Network", value: "1,200+" },
-      { label: "Loan Processing", value: "24x Faster" },
-      { label: "Financial Inclusion", value: "65K New Accounts" },
     ],
     testimonial: {
       text: "Our partnership with Cainoa transformed us from a traditional brick-and-mortar bank into a digital financial powerhouse. We went from 50,000 to 215,000 customers in 18 months.",
@@ -114,12 +96,6 @@ const caseStudies: CaseStudy[] = [
       "Firebase / Cloud Functions",
       "Data Analytics Dashboard",
     ],
-    results: [
-      { label: "Members Onboarded", value: "185,000+" },
-      { label: "Loan Turnaround", value: "62 Hours" },
-      { label: "Monthly Transactions", value: "₦1.8B" },
-      { label: "Default Rate Reduction", value: "42%" },
-    ],
     testimonial: {
       text: "For the first time, our cooperative members can check their savings, apply for loans, and receive disbursements from their phones. Cainoa brought us into the digital age without losing the human touch that defines cooperatives.",
       author: "Alhaji Musa Garba",
@@ -133,7 +109,7 @@ const caseStudies: CaseStudy[] = [
     industry: "Healthcare",
     region: "North-East Nigeria",
     challenge:
-      "FMC Gombe, a 450-bed tertiary hospital, relied on paper-based records across 30+ departments. Patient records were frequently lost, wait times averaged 4+ hours, drug inventory mismanagement led to stockouts, and regulatory reporting was a manual nightmare.",
+      "FMC Gombe, a major tertiary hospital, relied on paper-based records across numerous departments. Patient records were frequently lost, drug inventory mismanagement led to stockouts, and regulatory reporting was a manual nightmare.",
     solution:
       "We deployed a comprehensive health tech infrastructure: an integrated EMR/EHR system, RFID patient tracking, automated pharmacy inventory with expiry alerts, telemedicine module, and HIPAA-compliant data storage. All systems were built with offline-first capability for intermittent power scenarios.",
     tech: [
@@ -143,12 +119,6 @@ const caseStudies: CaseStudy[] = [
       "Pharmacy Automation",
       "MySQL / HL7 FHIR",
       "Solar-Powered Backup",
-    ],
-    results: [
-      { label: "Patient Wait Time", value: "78% Reduction" },
-      { label: "Records Digitized", value: "320,000+" },
-      { label: "Drug Stockouts", value: "Eliminated" },
-      { label: "Staff Productivity", value: "+54%" },
     ],
     testimonial: {
       text: "Cainoa understood that healthcare digitization in Africa requires resilience. Their offline-first architecture means our doctors never lose access to patient data, even during power outages. Lives have literally been saved because of this system.",
@@ -174,25 +144,12 @@ const caseStudies: CaseStudy[] = [
       "Python / Django",
       "TensorFlow / NLP",
     ],
-    results: [
-      { label: "Students Served", value: "45,000+" },
-      { label: "Admission Processing", value: "6 Weeks → 3 Days" },
-      { label: "Examination Cost", value: "74% Reduction" },
-      { label: "Transcript Issuance", value: "Instant On-Chain" },
-    ],
     testimonial: {
       text: "What Cainoa delivered goes far beyond an LMS. They created a complete digital academic ecosystem. Our students across conflict-affected areas can now continue their education uninterrupted through the platform.",
       author: "Prof. Aliyu Usman El-Nafaty",
       role: "Vice-Chancellor, University of Maiduguri",
     },
   },
-]
-
-const globalMetrics: Metric[] = [
-  { label: "Enterprises Served", value: "50+" },
-  { label: "System Uptime", value: "99.99%" },
-  { label: "Systems Deployed", value: "200+" },
-  { label: "Industries Covered", value: "10+" },
 ]
 
 function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
@@ -251,24 +208,7 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
               </div>
             </div>
 
-            <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {study.results.map((r) => (
-                <div key={r.label} className="p-4 rounded-2xl bg-white/5 border border-white/10">
-                  <div className="flex items-center gap-1.5 mb-1">
-                    <CheckCircle size={14} className="text-accent" />
-                    <p className="text-accent font-heading text-xl font-bold">{r.value}</p>
-                  </div>
-                  <p className="text-white/50 text-xs">{r.label}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-8 flex items-center gap-2 text-accent font-heading text-sm font-bold">
-                  <BarChart3 size={18} />
-                  <span>Key Results</span>
-                </div>
-
-                <div className="mt-8 p-6 rounded-2xl bg-white/5 border border-white/10 relative">
+            <div className="mt-8 p-6 rounded-2xl bg-white/5 border border-white/10 relative">
               <Quote size={24} className="text-accent/40 absolute top-4 left-4" />
               <blockquote className="pl-8 text-white/80 italic leading-relaxed">
                 &ldquo;{study.testimonial.text}&rdquo;
@@ -291,14 +231,6 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
               </div>
               <h4 className="font-heading text-2xl font-bold text-white mb-2">{study.client}</h4>
               <p className="text-white/60">{study.industry}</p>
-              <div className="mt-8 space-y-4 w-full">
-                {study.results.slice(0, 2).map((r) => (
-                  <div key={r.label} className="p-4 rounded-xl bg-white/5 border border-white/10">
-                    <p className="text-accent font-heading text-2xl font-bold">{r.value}</p>
-                    <p className="text-white/50 text-sm">{r.label}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>
@@ -334,18 +266,6 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
             <h4 className="font-heading text-xs font-bold text-primary/60 uppercase tracking-wider mb-1">Solution</h4>
             <p>{study.solution}</p>
           </div>
-        </div>
-
-        <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {study.results.map((r) => (
-            <div key={r.label} className="p-3 rounded-xl bg-primary/5 border border-primary/10 text-center">
-              <div className="flex items-center justify-center gap-1 mb-0.5">
-                <CheckCircle size={12} className="text-accent" />
-                <p className="text-accent font-heading text-lg font-bold">{r.value}</p>
-              </div>
-              <p className="text-muted-text text-xs">{r.label}</p>
-            </div>
-          ))}
         </div>
 
         <div className="mt-6 p-5 rounded-2xl bg-primary/5 border border-primary/10 relative">
@@ -400,43 +320,6 @@ export default function CaseStudies() {
               <CaseStudyCard key={study.id} study={study} index={i} />
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="rounded-3xl bg-gradient-to-br from-primary to-primary/95 border border-accent/10 p-10 lg:p-16"
-          >
-              <SectionHeading
-              title="Cainoa by the Numbers"
-              subtitle="Our track record speaks through the scale and reliability of our deployments."
-              badge="Metrics"
-            />
-            <div className="mt-6 flex items-center justify-center gap-2 text-white/40">
-              <BarChart3 size={20} />
-              <span className="text-sm font-medium tracking-wider uppercase">Performance Highlights</span>
-            </div>
-            <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {globalMetrics.map((m, i) => (
-                <motion.div
-                  key={m.label}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="text-center p-6 rounded-2xl bg-white/5 border border-white/10"
-                >
-                  <p className="font-heading text-4xl lg:text-5xl font-bold text-accent">{m.value}</p>
-                  <p className="text-white/60 text-sm mt-2">{m.label}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </section>
 

@@ -150,32 +150,7 @@ export default function Cybersecurity() {
         subtitle="Military-grade cybersecurity architecture protecting Africa's most critical digital infrastructure."
       />
 
-      <section className="py-20 lg:py-28 bg-secondary-bg/50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { label: "Threats Blocked", value: "2.4M+" },
-              { label: "Clients Protected", value: "150+" },
-              { label: "Security Engineers", value: "40+" },
-              { label: "Average Response", value: "<3min" },
-            ].map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-3xl sm:text-4xl font-bold text-accent mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted-text">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -187,29 +162,29 @@ export default function Cybersecurity() {
               transition={{ duration: 0.6 }}
             >
               <SectionHeading
-                badge="24/7 Operations"
-                title="Security Operations Center"
-                subtitle="Round-the-clock surveillance and incident response by elite security analysts."
+                badge="Security Monitoring"
+                title="Continuous Security Surveillance"
+                subtitle="Proactive threat monitoring and incident response by elite security analysts."
               />
               <div className="mt-8 space-y-4 text-muted-text leading-relaxed">
                 <p>
-                  Our Security Operations Centre (SOC) operates 24 hours a day, 365 days a year,
-                  monitoring your digital estate for threats, anomalies, and advanced persistent
-                  threats. Staffed by certified analysts and powered by AI-driven correlation
-                  engines, we provide the vigilance that enterprise security demands.
+                  Our security operations framework provides continuous monitoring of your
+                  digital estate for threats, anomalies, and advanced persistent threats.
+                  Certified analysts powered by AI-driven correlation engines deliver the
+                  vigilance that enterprise security demands.
                 </p>
                 <p>
                   From initial triage to full incident response and forensic investigation, our
-                  SOC teams follow industry-leading frameworks including NIST, MITRE ATT&CK, and
+                  teams follow industry-leading frameworks including NIST, MITRE ATT&CK, and
                   ISO 27035 to ensure consistent, repeatable, and effective security operations.
                 </p>
               </div>
               <div className="mt-8 grid sm:grid-cols-2 gap-4">
                 {[
-                  "Real-time SIEM monitoring and alerting",
+                  "Real-time threat monitoring and alerting",
                   "MITRE ATT&CK-aligned threat hunting",
                   "Automated playbook-based incident response",
-                  "24/7 dedicated analyst coverage",
+                  "Dedicated security analyst coverage",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <div className="mt-1 w-2 h-2 rounded-full bg-accent flex-shrink-0" />

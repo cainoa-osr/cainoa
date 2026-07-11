@@ -81,7 +81,7 @@ const infrastructureFeatures = [
 const benefits = [
   {
     icon: Zap,
-    title: "10x Faster Deployment",
+    title: "Faster Deployment",
     desc: "Pre-built infrastructure blueprints cut AI deployment timelines from months to weeks.",
   },
   {
@@ -92,7 +92,7 @@ const benefits = [
   {
     icon: BarChart3,
     title: "Cost-Optimized Inference",
-    desc: "Our serving stack reduces inference costs by up to 60% through intelligent batching and model quantization.",
+    desc: "Our serving stack reduces inference costs through intelligent batching and model quantization.",
   },
   {
     icon: Network,

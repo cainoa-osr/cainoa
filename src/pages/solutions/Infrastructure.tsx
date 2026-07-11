@@ -75,7 +75,7 @@ const services = [
     title: "High Availability Architecture",
     subtitle: "HA & Fault-Tolerant Systems",
     description:
-      "Architecting systems that never go down. We design multi-region, active-active, and active-passive architectures with automated failover, load balancing, and disaster avoidance strategies to guarantee 99.99% uptime for enterprise applications.",
+      "Architecting systems that never go down. We design multi-region, active-active, and active-passive architectures with automated failover, load balancing, and disaster avoidance strategies to guarantee enterprise-grade uptime for enterprise applications.",
     highlights: [
       "Multi-region active-active deployments",
       "Automated failover & self-healing",
@@ -202,28 +202,7 @@ export default function Infrastructure() {
                   innovation while we run the foundation.
                 </p>
               </div>
-              <div className="grid grid-cols-3 gap-4">
-                {[
-                  { label: "Uptime", value: "99.99%" },
-                  { label: "Deployments", value: "10,000+" },
-                  { label: "Nodes Managed", value: "500+" },
-                  { label: "Cloud Regions", value: "12+" },
-                  { label: "Certified Engineers", value: "50+" },
-                  { label: "Enterprises", value: "100+" },
-                ].map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="text-center p-4 rounded-2xl bg-white/5 border border-white/10"
-                  >
-                    <div className="font-heading text-2xl lg:text-3xl font-bold text-accent">
-                      {stat.value}
-                    </div>
-                    <div className="text-xs text-white/50 mt-1">
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
+
             </div>
           </motion.div>
         </div>
@@ -331,7 +310,7 @@ export default function Infrastructure() {
               },
               {
                 title: "Proven at Scale",
-                desc: "100+ enterprise deployments processing millions of transactions daily.",
+                desc: "enterprise deployments processing high volumes of transactions daily.",
               },
               {
                 title: "African-Grown",

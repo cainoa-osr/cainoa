@@ -1,6 +1,8 @@
 import { motion } from "framer-motion"
 import gsuLogo from "../assets/gsu alumni.png"
 import aqtrisLogo from "../assets/aqtris-logo-solid-1color.png"
+import benevolenceLogo from "../assets/Benovelance.jpeg"
+import fmbnLogo from "../assets/fmbn.jpeg"
 
 type PartnerWithLogo = { name: string; logo: string; description: string }
 type PartnerWithInitials = { name: string; initials: string; description: string }
@@ -24,12 +26,12 @@ const partners: Partner[] = [
   },
   {
     name: "Benevolence Cooperative Society",
-    initials: "BC",
+    logo: benevolenceLogo,
     description: "Financial Inclusion",
   },
   {
     name: "FMBN Equishare Cooperative Society",
-    initials: "FE",
+    logo: fmbnLogo,
     description: "Housing Finance",
   },
 ]

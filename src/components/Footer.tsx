@@ -1,12 +1,33 @@
 import { Button } from "./ui/button"
 import { ArrowUpRight } from "lucide-react"
+import { Link } from "react-router-dom"
 import logo from "../assets/cainoa logo.png"
 
 const footerLinks = {
-  Company: ["About", "Careers", "Leadership", "Press"],
-  Solutions: ["AI Platform", "Fintech", "Cybersecurity", "Infrastructure"],
-  Resources: ["Documentation", "Research", "Blog", "Case Studies"],
-  Legal: ["Privacy", "Terms", "Security", "Compliance"],
+  Company: [
+    { label: "About", to: "/about" },
+    { label: "Careers", to: "/careers" },
+    { label: "Leadership", to: "/leadership" },
+    { label: "Press", to: "/press" },
+  ],
+  Solutions: [
+    { label: "AI Platform", to: "/solutions/ai-platform" },
+    { label: "Fintech", to: "/solutions/fintech" },
+    { label: "Cybersecurity", to: "/solutions/cybersecurity" },
+    { label: "Infrastructure", to: "/solutions/infrastructure" },
+  ],
+  Resources: [
+    { label: "Documentation", to: "/resources/documentation" },
+    { label: "Research", to: "/resources/research" },
+    { label: "Blog", to: "/resources/blog" },
+    { label: "Case Studies", to: "/resources/case-studies" },
+  ],
+  Legal: [
+    { label: "Privacy", to: "/legal/privacy" },
+    { label: "Terms", to: "/legal/terms" },
+    { label: "Security", to: "/legal/security" },
+    { label: "Compliance", to: "/legal/compliance" },
+  ],
 }
 
 export default function Footer() {
@@ -53,13 +74,13 @@ export default function Footer() {
               </h4>
               <ul className="space-y-3">
                 {links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
+                  <li key={link.label}>
+                    <Link
+                      to={link.to}
                       className="text-sm text-white/70 hover:text-accent transition-colors duration-200"
                     >
-                      {link}
-                    </a>
+                      {link.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -68,9 +89,13 @@ export default function Footer() {
         </div>
 
         <div className="py-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <img src={logo} alt="Cainoa" className="h-7 w-auto brightness-0 invert" />
-          </div>
+          <Link to="/" className="flex items-center gap-2">
+            <img
+              src={logo}
+              alt="Cainoa"
+              className="h-7 w-auto brightness-0 invert"
+            />
+          </Link>
           <p className="text-xs text-white/40">
             &copy; {new Date().getFullYear()} Cainoa. All rights reserved.
           </p>

@@ -2,6 +2,10 @@ import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Button } from "./ui/button"
 import { ArrowRight } from "lucide-react"
+import aqtrisLogo from "../assets/aqtris-logo-solid-1color.png"
+import gsuLogo from "../assets/gsu alumni.png"
+import benevolenceLogo from "../assets/Benovelance.jpeg"
+import fmbnLogo from "../assets/fmbn.jpeg"
 
 function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -155,8 +159,8 @@ export default function HeroSection() {
           <p className="mt-8 text-lg sm:text-xl text-muted-text max-w-2xl leading-relaxed">
             Home to the region&apos;s leading engineers. We deploy advanced AI
             integrations, secure fintech platforms, and scalable digital
-            infrastructure for governments, enterprises, cooperatives, and
-            financial institutions.
+            infrastructure for governments, enterprises, cooperatives,
+            financial institutions, and educational institutions.
           </p>
         </motion.div>
 
@@ -184,17 +188,23 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="mt-16 flex items-center gap-8 text-sm text-muted-text"
+          className="mt-16 flex items-center gap-4 sm:gap-6 text-sm text-muted-text"
         >
-          <div className="flex -space-x-2">
-            {[1, 2, 3, 4].map((i) => (
-              <div
-                key={i}
-                className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-primary/10 to-accent/10"
-              />
-            ))}
+          <div className="flex -space-x-2 sm:-space-x-3">
+            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border-2 border-white bg-white shadow-sm overflow-hidden flex items-center justify-center">
+              <img src={aqtrisLogo} alt="Aqtris" className="h-5 sm:h-6 w-auto" />
+            </div>
+            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border-2 border-white bg-white shadow-sm overflow-hidden flex items-center justify-center">
+              <img src={gsuLogo} alt="GSU Alumni" className="h-6 sm:h-7 w-auto" />
+            </div>
+            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border-2 border-white bg-white shadow-sm overflow-hidden flex items-center justify-center">
+              <img src={benevolenceLogo} alt="Benevolence" className="h-5 sm:h-6 w-auto object-contain" />
+            </div>
+            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border-2 border-white bg-white shadow-sm overflow-hidden flex items-center justify-center">
+              <img src={fmbnLogo} alt="FMBN Equishare" className="h-5 sm:h-6 w-auto object-contain" />
+            </div>
           </div>
-          <span>Trusted by leading organizations across Africa</span>
+          <span className="font-medium">Trusted by leading organizations across Africa</span>
         </motion.div>
       </div>
 

@@ -2,19 +2,24 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "./ui/button"
+import { Link, useLocation } from "react-router-dom"
 import logo from "../assets/cainoa logo.png"
 
 const navLinks = [
-  { label: "Ecosystem", href: "#ecosystem" },
-  { label: "Products", href: "#products" },
-  { label: "Partners", href: "#partners" },
-  { label: "Technology", href: "#technology" },
-  { label: "Contact", href: "#contact" },
+  { label: "Ecosystem", href: "/solutions/infrastructure" },
+  { label: "Partners", href: "/#partners" },
+  { label: "Blueprint", href: "/solutions/cybersecurity" },
+  { label: "Contact", href: "/about" },
 ]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const location = useLocation()
+
+  useEffect(() => {
+    setMobileOpen(false)
+  }, [location])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -32,32 +37,31 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <a href="#" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-3 group">
             <img
               src={logo}
               alt="Cainoa"
               className="h-9 w-auto transition-transform duration-300 group-hover:scale-105"
             />
-            <span className="hidden sm:flex items-center gap-2 pl-2 border-l-2 border-border">
-              <span className="font-heading text-sm font-bold text-primary tracking-tight">
-                Cainoa
-              </span>
-              <span className="font-heading text-sm font-bold text-accent tracking-tight">
-                Blueprint
-              </span>
+            <span className="hidden sm:block font-heading text-sm font-bold text-primary tracking-tight">
+              Cainoa
             </span>
-          </a>
+          </Link>
 
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
-                className="relative text-sm font-medium text-muted-text hover:text-primary transition-colors duration-200 group"
+                to={link.href}
+                className={`relative text-sm font-medium transition-colors duration-200 group ${
+                  location.pathname === link.href
+                    ? "text-accent"
+                    : "text-muted-text hover:text-primary"
+                }`}
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -88,17 +92,23 @@ export default function Navbar() {
           >
             <div className="px-6 py-6 space-y-4">
               {navLinks.map((link, i) => (
-                <motion.a
+                <motion.div
                   key={link.label}
-                  href={link.href}
                   initial={{ opacity: 0, x: -16 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  onClick={() => setMobileOpen(false)}
-                  className="block text-lg font-medium text-primary hover:text-accent transition-colors"
                 >
-                  {link.label}
-                </motion.a>
+                  <Link
+                    to={link.href}
+                    className={`block text-lg font-medium transition-colors ${
+                      location.pathname === link.href
+                        ? "text-accent"
+                        : "text-primary hover:text-accent"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
               ))}
               <motion.div
                 initial={{ opacity: 0, y: 8 }}

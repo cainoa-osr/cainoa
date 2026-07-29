@@ -433,7 +433,7 @@ export default function AIPlatform() {
           >
             <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Ready to Build Your{" "}
-              <span className="text-accent">AI Future</span>?
+              <span className="text-accent-mint">AI Future</span>?
             </h2>
             <p className="mt-6 text-lg text-white/60 leading-relaxed">
               Partner with Cainoa to architect, deploy, and scale enterprise AI systems that

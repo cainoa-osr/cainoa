@@ -54,7 +54,7 @@ export default function BlueprintSection() {
             <h2 className="mt-4 font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-primary">
               The Cainoa
               <br />
-              <span className="text-accent">Blueprint</span>
+              <span className="text-accent-mint">Blueprint</span>
             </h2>
 
             <p className="mt-6 text-lg text-muted-text leading-relaxed">

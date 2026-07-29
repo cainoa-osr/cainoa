@@ -110,6 +110,7 @@ export default function Careers() {
       <PageHero
         badge="Careers"
         title="Join the Engineers Building Tomorrow"
+        highlight="Building Tomorrow"
         subtitle="At Cainoa, you'll work on Africa's most ambitious infrastructure projects alongside the brightest minds in engineering."
       />
 
@@ -379,7 +380,7 @@ export default function Careers() {
           >
             <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Ready to Build the{" "}
-              <span className="text-accent">Future of Africa</span>?
+              <span className="text-accent-mint">Future of Africa</span>?
             </h2>
             <p className="mt-6 text-lg text-white/60 leading-relaxed">
               Take the first step toward a career that matters. Join the team that's engineering Africa's digital transformation.

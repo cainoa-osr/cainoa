@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { HelmetProvider } from "react-helmet-async"
 import ScrollToTop from "./components/ScrollToTop"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
@@ -22,6 +23,7 @@ import Compliance from "./pages/legal/Compliance"
 
 export default function App() {
   return (
+    <HelmetProvider>
     <BrowserRouter>
       <ScrollToTop />
       <Navbar />
@@ -46,5 +48,6 @@ export default function App() {
       </Routes>
       <Footer />
     </BrowserRouter>
+    </HelmetProvider>
   )
 }

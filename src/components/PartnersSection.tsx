@@ -53,7 +53,7 @@ export default function PartnersSection() {
         >
           <h2 className="font-heading text-4xl sm:text-5xl font-bold text-primary">
             Powering Innovation{" "}
-            <span className="text-accent">Alongside</span>
+            <span className="text-accent-mint">Alongside</span>
           </h2>
           <p className="mt-6 text-lg text-muted-text leading-relaxed">
             Trusted by organizations building the future of Africa&apos;s digital

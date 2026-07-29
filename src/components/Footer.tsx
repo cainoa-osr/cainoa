@@ -39,7 +39,7 @@ export default function Footer() {
             <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
               Ready to build the
               <br />
-              <span className="text-accent">future of Africa?</span>
+              <span className="text-accent-mint">future of Africa?</span>
             </h2>
             <p className="mt-6 text-lg text-white/60 max-w-xl leading-relaxed">
               Partner with Cainoa to deploy world-class AI infrastructure and

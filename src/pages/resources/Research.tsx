@@ -441,7 +441,7 @@ export default function Research() {
           >
             <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Partner With Our{" "}
-              <span className="text-accent">Research Team</span>
+              <span className="text-accent-mint">Research Team</span>
             </h2>
             <p className="mt-6 text-lg text-white/60 leading-relaxed">
               Collaborate with Cainoa's world-class researchers on joint projects, sponsored research, and technology transfer initiatives.

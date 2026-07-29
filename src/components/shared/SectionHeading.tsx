@@ -5,6 +5,7 @@ interface SectionHeadingProps {
   subtitle?: string
   badge?: string
   align?: "left" | "center"
+  highlight?: string
 }
 
 export default function SectionHeading({
@@ -12,7 +13,23 @@ export default function SectionHeading({
   subtitle,
   badge,
   align = "left",
+  highlight,
 }: SectionHeadingProps) {
+  const renderTitle = () => {
+    if (!highlight || !title.includes(highlight)) {
+      return <>{title}</>
+    }
+    const before = title.slice(0, title.indexOf(highlight))
+    const after = title.slice(title.indexOf(highlight) + highlight.length)
+    return (
+      <>
+        {before}
+        <span className="text-accent-mint">{highlight}</span>
+        {after}
+      </>
+    )
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -27,7 +44,7 @@ export default function SectionHeading({
         </span>
       )}
       <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-primary leading-tight">
-        {title}
+        {renderTitle()}
       </h2>
       {subtitle && (
         <p className="mt-4 text-lg text-muted-text leading-relaxed">

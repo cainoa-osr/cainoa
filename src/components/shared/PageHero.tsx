@@ -4,9 +4,25 @@ interface PageHeroProps {
   title: string
   subtitle: string
   badge?: string
+  highlight?: string
 }
 
-export default function PageHero({ title, subtitle, badge }: PageHeroProps) {
+export default function PageHero({ title, subtitle, badge, highlight }: PageHeroProps) {
+  const renderTitle = () => {
+    if (!highlight || !title.includes(highlight)) {
+      return <>{title}</>
+    }
+    const before = title.slice(0, title.indexOf(highlight))
+    const after = title.slice(title.indexOf(highlight) + highlight.length)
+    return (
+      <>
+        {before}
+        <span className="text-accent-mint">{highlight}</span>
+        {after}
+      </>
+    )
+  }
+
   return (
     <section className="relative pt-40 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-to-b from-secondary-bg/50 to-white">
       <div className="absolute inset-0 pointer-events-none">
@@ -27,7 +43,7 @@ export default function PageHero({ title, subtitle, badge }: PageHeroProps) {
             </span>
           )}
           <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight text-primary">
-            {title}
+            {renderTitle()}
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-muted-text max-w-2xl leading-relaxed">
             {subtitle}

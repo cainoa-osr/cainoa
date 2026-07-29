@@ -23,7 +23,7 @@ export default function CTASection() {
         >
           <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
             Let&apos;s Build the{" "}
-            <span className="text-accent">Future Together</span>
+            <span className="text-accent-mint">Future Together</span>
           </h2>
           <p className="mt-6 text-lg text-white/60 leading-relaxed">
             Partner with Cainoa to deliver secure, scalable, and intelligent

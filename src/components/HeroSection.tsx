@@ -151,7 +151,7 @@ export default function HeroSection() {
 
           <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight text-primary">
             Powering the{" "}
-            <span className="text-accent">AI Transformation</span>
+            <span className="text-accent-mint">AI Transformation</span>
             <br />
             of a Modern Economy
           </h1>

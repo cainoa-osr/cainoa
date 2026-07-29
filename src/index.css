@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0F172A;
-  --color-accent: #16A34A;
+  --color-primary: #024428;
+  --color-accent: #024428;
+  --color-accent-light: #0B6B3A;
+  --color-accent-mint: #8ECE9C;
+  --color-accent-tint: #E6F0EA;
   --color-background: #FFFFFF;
-  --color-secondary-bg: #F8FAFC;
+  --color-secondary-bg: #F7F7F7;
   --color-text: #111827;
   --color-muted-text: #6B7280;
   --color-border: #E5E7EB;
@@ -26,6 +29,6 @@ body {
 }
 
 ::selection {
-  background-color: #16A34A;
+  background-color: #024428;
   color: #FFFFFF;
 }

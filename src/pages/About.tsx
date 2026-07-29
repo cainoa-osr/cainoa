@@ -37,6 +37,7 @@ export default function About() {
       <PageHero
         badge="About Cainoa"
         title="Building Africa's Future Through AI Infrastructure"
+        highlight="AI Infrastructure"
         subtitle="Cainoa is an enterprise technology company delivering secure AI systems, fintech platforms, enterprise software, and digital infrastructure for governments, cooperatives, financial institutions, and businesses across Africa."
       />
 

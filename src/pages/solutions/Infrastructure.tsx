@@ -172,6 +172,7 @@ export default function Infrastructure() {
       <PageHero
         badge="Solutions / Infrastructure"
         title="Scalable Infrastructure for Mission-Critical Systems"
+        highlight="Mission-Critical"
         subtitle="Cloud-native architecture, DevOps automation, and high-availability platforms engineered for enterprise reliability."
       />
 
@@ -191,7 +192,7 @@ export default function Infrastructure() {
                 </span>
                 <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
                   Enterprise Infrastructure,{" "}
-                  <span className="text-accent">Reimagined</span>
+                  <span className="text-accent-mint">Reimagined</span>
                 </h2>
                 <p className="mt-4 text-white/70 leading-relaxed">
                   Cainoa delivers production-grade infrastructure that

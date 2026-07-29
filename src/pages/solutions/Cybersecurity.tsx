@@ -147,6 +147,7 @@ export default function Cybersecurity() {
       <PageHero
         badge="Solutions / Cybersecurity"
         title="Security Built Into Every Layer"
+        highlight="Every Layer"
         subtitle="Military-grade cybersecurity architecture protecting Africa's most critical digital infrastructure."
       />
 

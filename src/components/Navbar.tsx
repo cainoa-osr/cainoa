@@ -29,11 +29,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
           ? "bg-white/80 backdrop-blur-xl border-b border-border shadow-sm"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -43,7 +42,7 @@ export default function Navbar() {
               alt="Cainoa"
               className="h-9 w-auto transition-transform duration-300 group-hover:scale-105"
             />
-            <span className="hidden sm:block font-heading text-sm font-bold text-primary tracking-tight">
+            <span className="sm:block font-heading text-2xl font-bold text-primary tracking-tight">
               Cainoa
             </span>
           </Link>
@@ -53,11 +52,10 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 to={link.href}
-                className={`relative text-sm font-medium transition-colors duration-200 group ${
-                  location.pathname === link.href
+                className={`relative text-sm font-medium transition-colors duration-200 group ${location.pathname === link.href
                     ? "text-accent"
                     : "text-muted-text hover:text-primary"
-                }`}
+                  }`}
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
@@ -100,11 +98,10 @@ export default function Navbar() {
                 >
                   <Link
                     to={link.href}
-                    className={`block text-lg font-medium transition-colors ${
-                      location.pathname === link.href
+                    className={`block text-lg font-medium transition-colors ${location.pathname === link.href
                         ? "text-accent"
                         : "text-primary hover:text-accent"
-                    }`}
+                      }`}
                   >
                     {link.label}
                   </Link>
